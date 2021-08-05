@@ -2,19 +2,21 @@ body {
     background: black;
 }
 
-.header{
+nav a{
+    position: relative;
+    color:white;
     display: inline;
     margin: 0px 60px;
     padding: 2px 10px;
-    
 }
 
-.header:hover {
+nav a:hover {
     background-color: white;
     color: darkslategrey;
 }
 
-header {
+nav, #welcome {
+    margin: 30px;
     color: white;
     text-align: center;
 }
@@ -28,3 +30,16 @@ header {
     min-height: 100%;
     z-index: -1;
   }
+
+#about-me{
+    display: inline;
+    margin: 0px;
+    padding: 20px;
+    color: white;
+    float: right;
+}
+
+#about-me img{
+    margin-right: 20px;
+    float: left;
+}
