@@ -1,0 +1,13 @@
+body {
+    background: darkslategrey;
+}
+
+.header {
+    display: inline;
+    color: white;
+    margin: 0px 40px;
+}
+
+#welcome {
+    color: white;
+}
