@@ -82,7 +82,7 @@ nav a:hover {
     font-weight: 0, 300;
 }
 
-#about{
+#about > h2{
     font-weight: 300;
     font-style: italic;
     font-size: 30px;
@@ -90,9 +90,25 @@ nav a:hover {
 
 #about ~ img{
     margin-right: 20px;
+    margin-bottom: 20px;
     float: left;
     outline: white;
     outline-width: 5px;
     outline-style: groove;
 }
 
+#contact {
+    text-align: center;
+}
+
+#icons {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+    overflow: hidden;
+}
+
+#icons > a {
+    margin: 0 75px;
+}
