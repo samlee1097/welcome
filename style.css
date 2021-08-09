@@ -110,5 +110,27 @@ nav a:hover {
 }
 
 #icons > a {
-    margin: 0 75px;
+    margin: 0 65px;
+}
+
+.rps-tableHeader {
+    font-size: 40px;
+    font-weight: 300;
+}
+#rps-game td{ /*Makes the table cells have double border*/
+    border: 1px double white;
+    padding: 15px;
+}
+#theScore{/*Makes the score counter centered and bolded*/
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: larger;
+    margin-right: auto;
+    position: relative;
+    text-align: center;
+}
+
+
+#reset-button-table {
+    text-align: center;
 }
