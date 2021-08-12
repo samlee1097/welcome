@@ -7,6 +7,13 @@ body {
     background-color: rgb(22, 22, 22);
 }
 
+#content {
+    width: 70vw;
+    min-width: 900px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
 .title-section {
     position: relative;
     width: 100%;
@@ -44,7 +51,7 @@ nav a{
     position: relative;
     color:white;
     display: inline;
-    margin: 20px 50px;
+    margin: 20px 3vw;
     padding: 0px 10px;
 }
 
@@ -58,7 +65,7 @@ nav a:hover {
     color: white;
     text-align: center;
     font-family: 'Open Sans', sans-serif;
-    font-weight: 300;
+    font-size: smaller;
 }
 
 #myVideo {
@@ -113,6 +120,11 @@ nav a:hover {
     margin: 0 65px;
 }
 
+#rps-game, #reset-table{
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .rps-tableHeader {
     font-size: 25px;
     font-weight: 300;
@@ -142,13 +154,13 @@ nav a:hover {
 }
 
 #reset-table #reset-button{
-    margin-left: 190px;
     margin-top: 5px;
     text-align: center;
     padding: 5px;
+    margin-left: 100px;
 }
 
-#reset-table #rps-goal{
+#rps-goal{
     margin-top: 5px;
     padding: 5px;
     font-style: italic;

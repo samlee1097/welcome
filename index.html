@@ -26,77 +26,77 @@
         </video> 
     </div>
     
-    <div>   
-        <br>  
-        <nav id = "where-tab">
-            <a href="#home">Home</a>
-            <a href="#about">About Me</a>
-            <a href="#portfolio">Portfolio</a>
-            <a href="#fun-facts">Fun Facts</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </div>
+    <div id = "content">
+        <div>   
+            <br>  
+            <nav id = "where-tab">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
 
-    <div class = "section-header">
-        <h2 id = "about">About Me</h2>
-        <img src = "images/me.jpg" alt = "me" width = 300px height = 400px>
-        <p>I have recently graduated with a Bachelor of Science in Mathematics this past spring 2021. The way my resume and past experiences were laid out built a pathway with a bright neon sign pointing towards a career teaching Mathematics. I unconsciously followed this pathway all my academic journey hoping that the voices of societal and cultural expectations would lead me to discover my purpose and identity. Yet the more energy I put into fueling these expectations, the further I felt away from finding the answers. It was when I graduated, I decided to step into the dreadful gray area that didn't know what I would like to do moving forward. </p>
-        <p>From the educational route to the financial route, I had too many career options that overwhelmed my mind with the fear of regretting the career I chose. That was when I began researching career paths, interviewing individuals in different careers, and journaling my strengths and weaknesses to organize my strengths, values, and goals. After 4 months of problem-solving, I narrowed down my options to two potential careers: an accountant or a software engineer. Becoming an accountant would have taught me important life skills such as taxes, economics, audits, and communication skills; but the downside was that I would have to go back to school in order to get the 60-course credit requirements to become certified (then I would have to study for intensive exams). I would be investing a lot of time to get an accountant certification.</p>
-    </div>
+        <div class = "section-header">
+            <h2 id = "about">About</h2>
+            <img src = "images/me.jpg" alt = "me" width = 300px height = 400px>
+            <p>Hi my name is Samuel Lee</p>
+            <p>Bachelor of Science in Mathematics (Go Terps!)</p>
+        </div>
 
-    <div class = "section-header">
-        <h2 id = "portfolio">Portfolio</h2>
-            <table id = rps-game>
-                <tr>
-                    <th class = "rps-tableHeader" colspan = "7">Rock Paper Scissors</th>
-                </tr>
-                <tr>
-                    <td><img src = "./images/RPS/rock.png" id="picRock" onclick="play(1)" width =75px height = 75px></td>
-                    <td colspan="3" rowspan="3" id="myPick"><img src = ./images/RPS/left-hand-paper.png id="picMy" width =150px height = 150px></td>
-                    <td colspan="3" rowspan="3" id="cpuPick"><img src = ./images/RPS/right-hand-paper.png id="picCPU" width =150px height = 150px></td>
-                </tr>
-                <tr>
-                    <td><img src = "./images/RPS/paper.png" id="picPaper" onclick="play(2)" width =75px height = 75px></td>
-                </tr>
-                </tr>
-                <tr>
-                    <td><img src = "./images/RPS/scissor.png" id="picScissors" onclick="play(3)" width =75px height = 75px></td>
-                </tr>
-                <tr>
-                    <td id="theScore" colspan="7">Wins: 0 Losses: 0 Ties: 0</td>
-                </tr>
-            </table>
-            <table id = "reset-table">
-                <tr>
-                    <td id = "rps-goal"> *Try to reach 10 wins before 10 losses!</td>
-                </tr>
-                <tr>
-                    <td colspan="7"><button type="button" id = "reset-button" onclick = "play(4)">Reset Score</button></td>
-                </tr>
-            </table>
-    </div>
+        <div class = "section-header">
+            <h2 id = "portfolio">Portfolio</h2>
+                <table id = rps-game>
+                    <tr>
+                        <th class = "rps-tableHeader" colspan = "7">Rock Paper Scissors</th>
+                    </tr>
+                    <tr>
+                        <td><img src = "./images/RPS/rock.png" id="picRock" onclick="play(1)" width =75px height = 75px></td>
+                        <td colspan="3" rowspan="3" id="myPick"><img src = ./images/RPS/left-hand-paper.png id="picMy" width =150px height = 150px></td>
+                        <td colspan="3" rowspan="3" id="cpuPick"><img src = ./images/RPS/right-hand-paper.png id="picCPU" width =150px height = 150px></td>
+                    </tr>
+                    <tr>
+                        <td><img src = "./images/RPS/paper.png" id="picPaper" onclick="play(2)" width =75px height = 75px></td>
+                    </tr>
+                    </tr>
+                    <tr>
+                        <td><img src = "./images/RPS/scissor.png" id="picScissors" onclick="play(3)" width =75px height = 75px></td>
+                    </tr>
+                    <tr>
+                        <td id="theScore" colspan="7">Wins: 0 Losses: 0 Ties: 0</td>
+                    </tr>
+                </table>
+                <table id = "reset-table">
+                    <tr>
+                        <td id = "rps-goal"> *Try to reach 10 wins before 10 losses!</td>
+                    </tr>
+                    <tr>
+                        <td colspan="7"><button type="button" id = "reset-button" onclick = "play(4)">Reset Score</button></td>
+                    </tr>
+                </table>
+        </div>
 
-    <div class = "section-header">
-        <h2 id = "fun-facts">Fun Facts</h2>
-        <div id = "fun-list">
-            <ul>
-                <li>I studied abroad in Singapore from 2018-2019</li>
-                <li>Myers-Briggs is INFJ</li>
-                <li>I hope one day I can give my own TedTalk</li>
-            </ul>
+        <div class = "section-header">
+            <h2 id = "fun-facts">Fun Facts</h2>
+            <div id = "fun-list">
+                <ul>
+                    <li>I studied abroad in Singapore from 2018-2019</li>
+                    <li>Myers-Briggs is INFJ</li>
+                    <li>I hope one day I can give my own TedTalk</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class = "section-header">
+            <h2 id = "contact">Contact</h2>
+            <div id = "icons">
+                <a href = "https://www.instagram.com/slee1097/" target="_blank"><img src = "images/instagram.png" alt = "instagram" width = "35px" height= "35px"></a>
+                <a href = "mailto: samlee1097@yahoo.com" target="_blank"><img src = "images/email.png" alt = "email" width = "40px" height= "40px"></a>
+                <a href = "https://www.youtube.com/channel/UCkP6LeBPzMzCR4Kam1RiMhA" target="_blank"><img src = "images/youtube.png" alt = "youtube" width = "40px" height= "40px"></a>
+                <a href = "https://www.linkedin.com/in/samlee1097/" target="_blank"><img src = "images/linkedin.png" alt = "linkedin" width = "35px" height= "35px"></a>
+                <a href = "https://github.com/samlee1097" target="_blank"><img src = "images/github.png" alt = "github" width = "35px" height= "35px"></a>
+            </div>
         </div>
     </div>
-
-    <div class = "section-header">
-        <h2 id = "contact">Contact</h2>
-        <div id = "icons">
-            <a href = "https://www.instagram.com/slee1097/" target="_blank"><img src = "images/instagram.png" alt = "instagram" width = "35px" height= "35px"></a>
-            <a href = "mailto: samlee1097@yahoo.com" target="_blank"><img src = "images/email.png" alt = "email" width = "40px" height= "40px"></a>
-            <a href = "https://www.youtube.com/channel/UCkP6LeBPzMzCR4Kam1RiMhA" target="_blank"><img src = "images/youtube.png" alt = "youtube" width = "40px" height= "40px"></a>
-            <a href = "https://www.linkedin.com/in/samlee1097/" target="_blank"><img src = "images/linkedin.png" alt = "linkedin" width = "35px" height= "35px"></a>
-            <a href = "https://github.com/samlee1097" target="_blank"><img src = "images/github.png" alt = "github" width = "35px" height= "35px"></a>
-        </div>
-    </div>
-
 </body>
 </html>
