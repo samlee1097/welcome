@@ -55,9 +55,10 @@ nav a{
     padding: 0px 10px;
 }
 
-nav a:hover {
+nav a:hover, #dad-button:hover, #reset-button:hover {
     background-color: white;
     color: darkslategrey;
+    border: 1px solid black;
 }
 
 #where-tab {
@@ -104,6 +105,26 @@ nav a:hover {
     outline-style: groove;
 }
 
+#about-me {
+    position: relative;
+    background-color: rgb(68, 68, 68, 0.3);
+    padding: 10px 20px;
+    margin-left:350px;
+    max-width: 600px;
+    border-radius: 8px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: larger;
+}
+
+ul.about-me-text li{
+    font-size: smaller;
+    list-style-type: square;
+}
+
+ol.about-me-text{
+    font-size: smaller;
+}
+
 #contact {
     text-align: center;
 }
@@ -125,17 +146,22 @@ nav a:hover {
     margin-right: auto;
 }
 
-.rps-tableHeader {
+.game-header {
     font-size: 25px;
     font-weight: 300;
     text-shadow: 1px 1px black;
     padding: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
 }
+
 #rps-game td{ 
     border: 1px ridge white;
     padding: 15px;
     text-align: center;
 }
+
 #theScore{/*Makes the score counter centered and bolded*/
     font-family: sans-serif;
     font-weight: bold;
@@ -144,7 +170,7 @@ nav a:hover {
     text-align: center;
 }
 
-#reset-button {
+#reset-button, #dad-button {
     font-family: 'Open Sans', sans-serif;
     color: white;
     background-color: transparent;
@@ -165,4 +191,22 @@ nav a:hover {
     padding: 5px;
     font-style: italic;
     font-weight:lighter;
+}
+
+.joke-container{
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    text-align: center;
+    background-color: rgb(68, 68, 68, 0.3);
+    border-radius: 8px;
+    width: 480px;
+    padding: 10px;
+}
+
+#dad-button{
+    width: 200px;
+    height: 50px;
+    font-size: x-large;
+    font-family: monospace;
 }

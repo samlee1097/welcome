@@ -1,11 +1,9 @@
-//Declaring counters
+//Declaring counters for rps-game
 var winCount=0;
 var loseCount=0;
-var tieCount=0;
 var choiceCPU;
 
 cpuGuess();
-
 
 function play(myChoice) {//function will make the game run
 
@@ -21,40 +19,69 @@ function play(myChoice) {//function will make the game run
         picMy.src="./images/RPS/left-hand-scissor.png";
         cpuGuess();
     }
-    
-    if (myChoice==choiceCPU) {//IF your selection equals the computer's selection, run this code
-        tieCount++;// Adds one to the tie counter
-        theScore.innerHTML = "Wins: "+ winCount+" Losses: "+loseCount+ " Ties: " +tieCount;//Updates score
-    }
-    if (myChoice==1 && choiceCPU==2 || myChoice==2 && choiceCPU==3 || myChoice==3 && choiceCPU==1) {//If you lose the round, run this code
-        loseCount++;
-        theScore.innerHTML = "Wins: "+ winCount+" Losses: "+loseCount+ " Ties: " +tieCount;//Updates score
-    }
-    if (myChoice==1 && choiceCPU==3 || myChoice==2 && choiceCPU==1 || myChoice==3 && choiceCPU==2) {//If you win the round, run this code
-        winCount++;
-        theScore.innerHTML = "Wins: "+ winCount+" Losses: "+loseCount+ " Ties: " +tieCount;//Updates score
-    }
 
     if (myChoice===4) {//Resets game
         winCount=0;
         loseCount=0;
-        tieCount=0;
-        theScore.innerHTML = "Wins: "+ winCount+" Losses: "+loseCount+ " Ties: " +tieCount;//Updates score
+        theScore.innerHTML = "Let's Play!" + "<br />"+ "Wins: "+ winCount+" Losses: "+loseCount;//Updates score
+    }
+    
+    if (winCount<10 && loseCount<10){ //Only execute if win/loss < 10
+        if (myChoice==choiceCPU) {//IF your selection equals the computer's selection, run this code
+            theScore.innerHTML = " Tie! " + "<br />" + "Wins: "+ winCount+" Losses: "+loseCount;//Updates score
+        }
+        if (myChoice==1 && choiceCPU==2 || myChoice==2 && choiceCPU==3 || myChoice==3 && choiceCPU==1) {//If you lose the round, run this code
+            loseCount++;
+            theScore.innerHTML = " Loss! " + "<br />" + "Wins: "+ winCount+" Losses: "+loseCount;//Updates score
+
+        }
+        if (myChoice==1 && choiceCPU==3 || myChoice==2 && choiceCPU==1 || myChoice==3 && choiceCPU==2) {//If you win the round, run this code
+            winCount++;
+            theScore.innerHTML = " Win! " + "<br />" + "Wins: "+ winCount+" Losses: "+loseCount;//Updates score
+
+        }
+    }
+
+    else {
+        if (loseCount==10) {
+            theScore.innerHTML = "Sorry try again!";
+        }
+
+        if (winCount==10) {
+            theScore.innerHTML = "Great Job!";
+        }
     }
 }
 
 function cpuGuess(){
     var computerChoice= Math.random();
     if (computerChoice>=0 && computerChoice<=0.33) {// 1/3 Percentage to choose rock
-        picCPU.src = "./images/RPS/right-hand-rock.png";
+        document.getElementById("picCPU").src = './images/RPS/right-hand-rock.png';
         choiceCPU =1;
     }
     if (computerChoice>=0.34 && computerChoice<=0.66) {// 1/3 Percentage to choose paper
-        picCPU.src = "./images/RPS/right-hand-paper.png";
+        document.getElementById("picCPU").src = './images/RPS/right-hand-paper.png';
         choiceCPU =2;
     }
     if (computerChoice>=0.67 && computerChoice<=1) {// 1/3 Percentage to choose scissors
-        picCPU.src = "./images/RPS/right-hand-scissor.png";
+        document.getElementById("picCPU").src = './images/RPS/right-hand-scissor.png';
         choiceCPU =3;
     }     
+}
+
+//Dad Jokes
+const button = document.querySelector('.joke-container button');
+const jokeText = document.querySelector('.joke-container p');
+document.addEventListener('DOMContentLoaded', getJoke)
+
+button.addEventListener('click', getJoke);
+
+async function getJoke(){
+    const jokeData = await fetch('https://icanhazdadjoke.com/', {
+        headers: {
+            'Accept': 'application/json'
+        }
+    });
+    const jokeObj = await jokeData.json();
+    jokeText.innerHTML = jokeObj.joke;
 }
